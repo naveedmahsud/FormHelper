@@ -13,3 +13,21 @@ public JsonResult GetTempList()
                 MaxJsonLength = int.MaxValue
             };
         }
+        
+        [HttpPost]
+        public async Task<JsonResult> EBizChargeAdvancedSearch(ViewModel modelVM)
+        {
+            
+            // 1- Mapping of VM
+            // 2- Save Data
+            
+
+            return new JsonResult()
+            {
+                ContentEncoding = Encoding.Default,
+                ContentType = "application/json",
+                Data = modelVM,
+                JsonRequestBehavior = JsonRequestBehavior.AllowGet,
+                MaxJsonLength = int.MaxValue
+            };
+        }
