@@ -1,0 +1,15 @@
+[HTTPGET]
+public JsonResult GetTempList()
+        {
+            List<TempViewModel> tempList = new List<TempViewModel>();
+            // API CALL
+            tempList = your return list from API CALL
+            return new JsonResult()
+            {
+                ContentEncoding = Encoding.Default,
+                ContentType = "application/json",
+                Data = tempList,
+                JsonRequestBehavior = JsonRequestBehavior.AllowGet,
+                MaxJsonLength = int.MaxValue
+            };
+        }
